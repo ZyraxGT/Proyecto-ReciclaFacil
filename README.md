@@ -1,6 +1,6 @@
 # API de Registro e Inicio de Sesión
 
-Este proyecto es una API básica con Flask que permite registrar usuarios e iniciar sesión.
+Este proyecto es una API básica con Flask que permite registrar usuarios e iniciar sesión el cual incluye tambien una pequeño prototipo, con funciones basicas y botones de uso.
 
 ## Endpoints
 
