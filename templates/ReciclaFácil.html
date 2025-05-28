@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReciclaFácil - Prototipo</title>
+    <!-- Agregar Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ReciclaFácil.css') }}">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/3320/3320812.png">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .banner {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="topnav">
+        <a href="{{ url_for('index') }}">Volver al inicio</a>
+        <a>Descargar</a>
+        <a href="/login_form">Iniciar Sesion</a>
+        <div class="custom-input">
+            <img src="https://cdn-icons-png.flaticon.com/128/2311/2311526.png" alt="search">
+            <input type="text" placeholder="      Buscar">
+        </div>
+    </div>
+
+    <br><br>
+
+  <!-- Carrusel de imágenes -->
+  <div id="carousel-container-biblio">
+    <div id="image-carousel-biblio">
+        <div class="carousel-item-biblio">
+            <img class="carousel-image-biblio" src="https://img.interempresas.net/fotos/1265944.jpeg">
+        </div>
+
+        <div class="carousel-item-biblio">
+            <img class="carousel-image-biblio" src="https://img.interempresas.net/fotos/1265945.jpeg">
+        </div>
+
+        <div class="carousel-item-biblio">
+            <img class="carousel-image-biblio" src="https://img.interempresas.net/fotos/1265946.jpeg">
+        </div>
+
+        <div class="carousel-item-biblio">
+            <img class="carousel-image-biblio" src="https://img.interempresas.net/fotos/1265948.jpeg">
+        </div>
+    </div>
+    <div class="carousel-text-biblio">
+        <h1>ReciclaFácil - Prototipo</h1>
+        <p>Una aplicación diseñada para facilitar el reciclaje correcto de productos.</p>
+    </div>
+</div>
+
+    
+    <br><br><br>
+    
+    <div class="devices-container">
+        <!-- Dispositivo Móvil - Pantalla de Inicio -->
+        <div class="mobile-device">
+            <div class="device-header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <span>ReciclaFácil</span>
+                </div>
+                <i class="fas fa-bell"></i>
+            </div>
+            <div class="device-content">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar producto...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <h3>Productos recientes</h3>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2745/2745111.png" alt="Botella de agua" style="width: 70px; height: 70px;">
+                    </div>
+                    <div class="product-info"> 
+                        <div class="product-name">Botella de agua 500ml</div>
+                        <div class="product-details">PET - Plástico tipo 1</div>
+                        <span class="recyclable-tag">Reciclable</span>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://cdn-icons-png.flaticon.com/128/4391/4391615.png" alt="Botella de agua" style="width: 60px; height: 60px;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">Caja de cereal</div>
+                        <div class="product-details">Cartón - Papel</div>
+                        <span class="recyclable-tag">Reciclable</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://cdn-icons-png.flaticon.com/128/7047/7047661.png" alt="Botella de agua" style="width: 70px; height: 70px;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">Botella de vidrio</div>
+                        <div class="product-details">Vidrio</div>
+                        <span class="recyclable-tag">Reciclable</span>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 20px;">Puntos de reciclaje cercanos</h3>
+                <div class="map-container">
+                    <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63450.825965363714!2d-75.583232341304!3d6.306148626052483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442fa5a03b925f%3A0x87984a4fce25433f!2sRecuperadores%20Ambientales%20de%20Bello!5e0!3m2!1ses!2sco!4v1746219362138!5m2!1ses!2sco" width="302" height="290" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                </div>
+                
+                <div class="recycling-point">
+                    <div class="point-info">
+                        <div class="point-name">Punto Limpio Municipal</div>
+                        <div class="point-address">Av. Principal 123</div>
+                        <div class="point-distance"><i class="fas fa-location-dot" style="margin-right: 5px;"></i> 1.2 km</div>
+                        <div class="materials-accepted">
+                            <span class="material-tag">Plástico</span>
+                            <span class="material-tag">Papel</span>
+                            <span class="material-tag">Vidrio</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recycling-point">
+                    <div class="point-info">
+                        <div class="point-name">EcoRecicla</div>
+                        <div class="point-address">Calle Secundaria 456</div>
+                        <div class="point-distance"><i class="fas fa-location-dot" style="margin-right: 5px;"></i> 2.5 km</div>
+                        <div class="materials-accepted">
+                            <span class="material-tag">Electrónicos</span>
+                            <span class="material-tag">Baterías</span>
+                            <span class="material-tag">Metales</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scan-button">
+                <i class="fas fa-camera"></i>
+            </div>
+            
+            <div class="nav-buttons">
+                <div class="nav-button active">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </div>
+                <div class="nav-button">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Mapa</span>
+                </div>
+                <div class="nav-button">
+                    <i class="fas fa-history"></i>
+                    <span>Historial</span>
+                </div>
+                <div class="nav-button">
+                    <i class="fas fa-user"></i>
+                    <span>Perfil</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dispositivo Móvil - Pantalla de Escaneo -->
+        <div class="mobile-device">
+            <div class="device-header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <span>ReciclaFácil</span>
+                </div>
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="device-content">
+                <div class="camera-view">
+                    <div class="scan-frame">
+                        <div class="scan-line"></div>
+                    </div>
+                    <div class="camera-instruction">
+                        Centra el código de barras en el recuadro
+                    </div>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="No tiene código? Búsqueda manual">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <h3>Escaneados recientemente</h3>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2745/2745111.png" alt="Botella de agua" style="width: 70px; height: 70px;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">Botella de agua 500ml</div>
+                        <div class="product-details">PET - Plástico tipo 1</div>
+                        <span class="recyclable-tag">Reciclable</span>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://cdn-icons-png.flaticon.com/128/4391/4391615.png" alt="Botella de agua" style="width: 60px; height: 60px;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">Caja de cereal</div>
+                        <div class="product-details">Cartón - Papel</div>
+                        <span class="recyclable-tag">Reciclable</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nav-buttons">
+                <div class="nav-button">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </div>
+                <div class="nav-button">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Mapa</span>
+                </div>
+                <div class="nav-button active">
+                    <i class="fas fa-camera"></i>
+                    <span>Escanear</span>
+                </div>
+                <div class="nav-button">
+                    <i class="fas fa-user"></i>
+                    <span>Perfil</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dispositivo Móvil - Pantalla de Resultados -->
+        <div class="mobile-device">
+            <div class="device-header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <span>ReciclaFácil</span>
+                </div>
+                <i class="fas fa-share-alt"></i>
+            </div>
+            <div class="device-content">
+                <div class="result-container">
+                    <div class="result-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2745/2745111.png" alt="Botella de agua" style="width: 60px; height: 60px;">
+                    </div>
+                    <h2>Botella de agua 500ml</h2>
+                    <div style="margin: 10px 0;">Material: <strong>PET (Plástico tipo 1)</strong></div>
+                    
+                    <div class="instructions">
+                        <h3>Instrucciones de reciclaje:</h3>
+                        <ul>
+                            <li>Vacía completamente el contenido</li>
+                            <li>Quita la etiqueta si es posible</li>
+                            <li>Aplasta la botella para reducir su volumen</li>
+                            <li>Deposita en contenedor <strong style="color: var(--primary-color);">AMARILLO</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="impact-info">
+                        <h3>Impacto ambiental:</h3>
+                        <p>Al reciclar esta botella correctamente, ahorras:</p>
+                        <ul>
+                            <li>2.5 litros de agua</li>
+                            <li>0.3 kg de CO2</li>
+                            <li>0.1 kWh de energía</li>
+                        </ul>
+                    </div>
+                    
+                    <button style="background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: 5px; margin-top: 20px; display: flex; align-items: center;">
+                        <i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>
+                        Encontrar punto de reciclaje
+                    </button>
+                </div>
+            </div>
+            
+            <div class="nav-buttons">
+                <div class="nav-button">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </div>
+                <div class="nav-button">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Mapa</span>
+                </div>
+                <div class="nav-button">
+                    <i class="fas fa-camera"></i>
+                    <span>Escanear</span>
+                </div>
+                <div class="nav-button">
+                    <i class="fas fa-user"></i>
+                    <span>Perfil</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Página Web - Pantalla de Inicio -->
+        <div class="web-device">
+            <div class="device-header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <span>ReciclaFácil</span>
+                </div>
+                <div>
+                    <button style="background-color: white; color: var(--primary-color); border: 1px solid var(--primary-color); padding: 5px 15px; border-radius: 5px; margin-right: 10px;">Iniciar sesión</button>
+                    <button style="background-color: var(--primary-color); color: white; border: none; padding: 5px 15px; border-radius: 5px;">Descargar App</button>
+                </div>
+            </div>
+            <div class="device-content">
+                <div class="web-nav">
+                    <div class="web-nav-item active">Inicio</div>
+                    <div class="web-nav-item">Buscar productos</div>
+                    <div class="web-nav-item">Puntos de reciclaje</div>
+                    <div class="web-nav-item">Impacto ambiental</div>
+                    <div class="web-nav-item">Educación</div>
+                </div>
+                
+                <h2 style="margin-bottom: 20px;">Impacto colectivo</h2>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-number">15,430</div>
+                        <div class="stat-label">Productos reciclados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3,240</div>
+                        <div class="stat-label">Kg de CO2 ahorrados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8,500</div>
+                        <div class="stat-label">Litros de agua ahorrados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1,200</div>
+                        <div class="stat-label">Usuarios activos</div>
+                    </div>
+                </div>
+                
+                <div class="search-bar" style="max-width: 600px; margin: 30px auto;">
+                    <input type="text" placeholder="Buscar producto por nombre o código de barras...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <h3 style="margin-bottom: 15px;">Productos más buscados</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                    <div class="product-card" style="width: 210px;">
+                        <div class="product-image">
+                            <img src="https://cdn-icons-png.flaticon.com/128/2745/2745111.png" alt="Botella de agua" style="width: 60px; height: 60px;">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Botella de agua 500ml</div>
+                            <div class="product-details">PET - Plástico tipo 1</div>
+                            <span class="recyclable-tag">Reciclable</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" style="width: 210px;">
+                        <div class="product-image">
+                            <img src="https://cdn-icons-png.flaticon.com/128/4391/4391615.png" alt="Caja de cereal" style="width: 60px; height: 60px;">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Caja de cereal</div>
+                            <div class="product-details">Cartón - Papel</div>
+                            <span class="recyclable-tag">Reciclable</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" style="width: 210px;">
+                        <div class="product-image">
+                            <img src="https://cdn-icons-png.flaticon.com/128/7047/7047661.png" alt="Botella de vidrio" style="width: 60px; height: 60px;">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Botella de vidrio</div>
+                            <div class="product-details">Vidrio</div>
+                            <span class="recyclable-tag">Reciclable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Página Web - Pantalla de Búsqueda -->
+        <div class="web-device">
+            <div class="device-header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <span>ReciclaFácil</span>
+                </div>
+                <div>
+                    <button style="background-color: white; color: var(--primary-color); border: 1px solid var(--primary-color); padding: 5px 15px; border-radius: 5px; margin-right: 10px;">Iniciar sesión</button>
+                    <button style="background-color: var(--primary-color); color: white; border: none; padding: 5px 15px; border-radius: 5px;">Descargar App</button>
+                </div>
+            </div>
+            <div class="device-content">
+                <div class="web-nav">
+                    <div class="web-nav-item">Inicio</div>
+                    <div class="web-nav-item active">Buscar productos</div>
+                    <div class="web-nav-item">Puntos de reciclaje</div>
+                    <div class="web-nav-item">Impacto ambiental</div>
+                    <div class="web-nav-item">Educación</div>
+                </div>
+                
+                <div style="display: flex; gap: 20px;">
+                    <div style="width: 70%;">
+                        <div class="search-bar">
+                            <input type="text" placeholder="Buscar producto por nombre o código de barras..." value="Botella de agua">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                        
+                        <div class="filter-options">
+                            <div class="filter-option active">Todos</div>
+                            <div class="filter-option">Plásticos</div>
+                            <div class="filter-option">Papel/Cartón</div>
+                            <div class="filter-option">Vidrio</div>
+                            <div class="filter-option">Metal</div>
+                            <div class="filter-option">Electrónicos</div>
+                            <div class="filter-option">Orgánicos</div>
+                        </div>
+                        
+                        <h3 style="margin: 20px 0 15px;">Resultados de búsqueda (3)</h3>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://cdn-icons-png.flaticon.com/128/2745/2745111.png" alt="Botella de agua" style="width: 60px; height: 60px;">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-name">Botella de agua 500ml</div>
+                                <div class="product-details">PET - Plástico tipo 1</div>
+                                <span class="recyclable-tag">Reciclable</span>
+                                <div style="margin-top: 5px;">
+                                    <a href="#" style="color: var(--primary-color); text-decoration: none; font-size: 14px;">Ver instrucciones de reciclaje</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://cdn-icons-png.flaticon.com/128/2447/2447764.png" alt="Botella de agua" style="width: 60px; height: 60px;">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-name">Botella de agua 1L</div>
+                                <div class="product-details">PET - Plástico tipo 1</div>
+                                <span class="recyclable-tag">Reciclable</span>
+                                <div style="margin-top: 5px;">
+                                    <a href="#" style="color: var(--primary-color); text-decoration: none; font-size: 14px;">Ver instrucciones de reciclaje</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://cdn-icons-png.flaticon.com/128/18025/18025424.png" alt="Botella de agua con gas" style="width: 60px; height: 60px;">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-name">Botella de agua con gas 500ml</div>
+                                <div class="product-details">PET - Plástico tipo 1</div>
+                                <span class="recyclable-tag">Reciclable</span>
+                                <div style="margin-top: 5px;">
+                                    <a href="#" style="color: var(--primary-color); text-decoration: none; font-size: 14px;">Ver instrucciones de reciclaje</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="width: 30%; background-color: #f9f9f9; border-radius: 10px; padding: 15px;">
+                        <h3 style="margin-bottom: 15px;">Tu código postal</h3>
+                        <div class="search-bar" style="margin-bottom: 20px;">
+                            <input type="text" placeholder="Ingresa tu código postal">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                        
+                        <h3 style="margin-bottom: 15px;">Puntos de reciclaje cercanos</h3>
+                        <div class="map-container" style="height: 150px; margin-bottom: 15px;">
+                            <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63450.825965363714!2d-75.583232341304!3d6.306148626052483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442fa5a03b925f%3A0x87984a4fce25433f!2sRecuperadores%20Ambientales%20de%20Bello!5e0!3m2!1ses!2sco!4v1746219362138!5m2!1ses!2sco" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                        </div>
+                        
+                        <div class="recycling-point" style="margin-bottom: 10px;">
+                            <div class="point-info">
+                                <div class="point-name">Punto Limpio Municipal</div>
+                                <div class="point-address">Av. Principal 123</div>
+                                <div style="font-size: 12px; color: #666;">
+                                    <i class="fas fa-clock" style="margin-right: 5px;"></i> Abierto: 9:00 - 18:00
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" style="color: var(--primary-color); text-decoration: none; font-size: 14px; display: block; text-align: center; margin-top: 10px;">Ver todos los puntos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="footer">
+        <h2>ReciclaFácil - Proyecto Educativo</h2>
+        <p><strong>Descripción:</strong> ReciclaFácil es una aplicación diseñada para ayudar a los usuarios a identificar la manera correcta de reciclar sus productos mediante escaneo de códigos y ubicación de puntos de reciclaje cercanos.</p>
+        
+        <p><strong>Proyecto por:</strong><br>
+        Juan Angel Rangel Cediel</p>
+        
+        <p><strong>Contacto:</strong><br>
+        📧 jr2404er@gmail.com<br>
+        📱 +57 310 426 3051</p>
+        
+        <p>Proyecto académico - 2025 © Todos los derechos reservados</p>
+    </div>
+    
+      </footer>
+
+    <script>
+        // Configuración del carrusel
+        let currentIndex = 0;
+        const carouselImages = document.querySelectorAll('.carousel-image-biblio');
+        const numImages = carouselImages.length;
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % numImages;
+            const displacement = -currentIndex * 100;
+            document.getElementById('image-carousel-biblio').style.transform = `translateX(${displacement}%)`;
+        }
+
+
+        setInterval(showNextImage, 3000); // Cambia la imagen cada 3 segundos
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUrl = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentUrl) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+    
+    <script>
+        // Este código JavaScript implementaría la funcionalidad interactiva
+        // Las siguientes son solo funciones de muestra que se conectarían con la API real
+        
+        // Función para escanear códigos de barras
+        function scanBarcode() {
+            // En una implementación real, esto accedería a la cámara
+            // y utilizaría alguna biblioteca de escaneo como QuaggaJS
+            console.log("Escaneando código de barras...");
+            
+            // Simulamos que se encontró un producto
+            return {
+                id: "7501234567890",
+                name: "Botella de agua 500ml",
+                material: "PET - Plástico tipo 1",
+                recyclable: true,
+                instructions: [
+                    "Vacía completamente el contenido",
+                    "Quita la etiqueta si es posible",
+                    "Aplasta la botella para reducir su volumen",
+                    "Deposita en contenedor AMARILLO"
+                ],
+                impact: {
+                    water: 2.5,
+                    co2: 0.3,
+                    energy: 0.1
+                }
+            };
+        }
+        
+        // Función para buscar puntos de reciclaje cercanos
+        function findRecyclingPoints(latitude, longitude, materialType) {
+            // En una implementación real, esto haría una llamada a la API
+            // con los parámetros de ubicación y tipo de material
+            console.log(`Buscando puntos de reciclaje cerca de ${latitude}, ${longitude} para ${materialType}`);
+            
+            // Simulamos que se encontraron puntos de reciclaje
+            return [
+                {
+                    name: "Punto Limpio Municipal",
+                    address: "Av. Principal 123",
+                    distance: 1.2,
+                    materials: ["Plástico", "Papel", "Vidrio"],
+                    schedule: "9:00 - 18:00"
+                },
+                {
+                    name: "EcoRecicla",
+                    address: "Calle Secundaria 456",
+                    distance: 2.5,
+                    materials: ["Electrónicos", "Baterías", "Metales"],
+                    schedule: "10:00 - 19:00"
+                }
+            ];
+        }
+        
+        // Función para registrar un producto reciclado
+        function logRecycledProduct(productId, userId) {
+            // En una implementación real, esto enviaría datos al servidor
+            console.log(`Usuario ${userId} ha reciclado el producto ${productId}`);
+            
+            // Actualizamos estadísticas del usuario
+            return {
+                totalRecycled: 12,
+                waterSaved: 30,
+                co2Saved: 3.6,
+                energySaved: 1.2
+            };
+        }
+        
+        // Función para buscar productos por nombre o código
+        function searchProducts(query) {
+            // En una implementación real, esto haría una llamada a la API
+            console.log(`Buscando productos con: ${query}`);
+            
+            // Simulamos que se encontraron productos
+            return [
+                {
+                    id: "7501234567890",
+                    name: "Botella de agua 500ml",
+                    material: "PET - Plástico tipo 1",
+                    recyclable: true
+                },
+                {
+                    id: "7501234567891",
+                    name: "Botella de agua 1L",
+                    material: "PET - Plástico tipo 1",
+                    recyclable: true
+                },
+                {
+                    id: "7501234567892",
+                    name: "Botella de agua con gas 500ml",
+                    material: "PET - Plástico tipo 1",
+                    recyclable: true
+                }
+            ];
+        }
+
+
+        
+    </script>
+</body>
+</html>

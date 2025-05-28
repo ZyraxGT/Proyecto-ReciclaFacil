@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingresar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+</head>
+<body>
+    <h1>Ingresa tus datos</h1>
+<form method="POST" action="/registro_web">
+    <label>Usuario:</label><br>
+    <input type="text" name="usuario"><br>
+    <label>Contraseña:</label><br>
+    <input type="password" name="contrasena"><br>
+    <button type="submit">Registrarse</button>
+</form>

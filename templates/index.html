@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ReciclaFácil.css') }}">
+    <style>
+        .boton {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #2e8b57;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: sans-serif;
+            font-size: 16px;
+        }
+        .boton:hover {
+            background-color: #246b45;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido</h1>
+
+    <a href="{{ url_for('reciclafacil') }}" class="boton">Ir a ReciclaFácil</a>
+    <a href="/registro_form" class="boton">Registrarse</a>
+    <a href="/login_form" class="boton">Iniciar Sesión</a>
+</body>
+</html>
+
+<div class="footer">
+        <h2>ReciclaFácil - Proyecto Educativo</h2>
+        <p><strong>Descripción:</strong> ReciclaFácil es una aplicación diseñada para ayudar a los usuarios a identificar la manera correcta de reciclar sus productos mediante escaneo de códigos y ubicación de puntos de reciclaje cercanos.</p>
+        
+        <p><strong>Proyecto por:</strong><br>
+        Juan Angel Rangel Cediel</p>
+        
+        <p><strong>Contacto:</strong><br>
+        📧 jr2404er@gmail.com<br>
+        📱 +57 310 426 3051</p>
+        
+        <p>Proyecto académico - 2025 © Todos los derechos reservados</p>
+    </div>
